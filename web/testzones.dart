@@ -4,16 +4,15 @@ import 'package:angular/application_factory.dart';
 
 @Component(
     selector: "x-square",
-    template: '{{foo.square}}',
-    publishAs: 'foo'
+    template: '{{square}}'
 )
 class Square implements ScopeAware {
   Scope scope;
-  num square = 0;
+  num square = 2;
 
   Square(){
     new Timer.periodic(new Duration(seconds: 1), (_) { 
-      square = square * square;
+      square *= square;
     });
   }
 }
