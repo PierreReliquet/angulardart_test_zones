@@ -4,7 +4,7 @@ import 'package:angular/application_factory.dart';
 
 @Component(
     selector: "x-square",
-    template: '{{square}}'
+    templateUrl: 'testzones.tpl.html'
 )
 class Square implements ScopeAware {
   Scope scope;
